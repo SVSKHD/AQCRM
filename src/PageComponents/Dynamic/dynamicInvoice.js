@@ -16,7 +16,6 @@ const AquaDyanamicInvoicesComponent = () => {
   const getInvoiceById = async (id) => {
     await getIndividualInvoice(id).then((res) => {
       setInvoice(res.data);
-      console.log("res", invoice);
       if (res) {
         setGst(res.data.gst);
       }
