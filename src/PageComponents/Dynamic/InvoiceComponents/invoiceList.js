@@ -1,4 +1,4 @@
-import InvoiceOperations from "../services/invoice";
+import InvoiceOperations from "../../../services/invoice";
 import { useRouter } from "next/navigation";
 import { Card, ButtonGroup, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
