@@ -1,0 +1,27 @@
+{
+  "name": "nextcrm",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "air": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.1",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "moment": "^2.29.4",
+    "mongoose": "^7.4.1",
+    "nanoid": "^4.0.2",
+    "next": "13.4.12",
+    "next-connect": "^1.0.0",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.10.1"
+  }
+}

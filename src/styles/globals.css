@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+  background-color: #E7F6F2!important;
+  color: #2C3333!important;
+  font-family: "Roboto" !important;
+}
+.custom-navbar{
+  border-radius: 10px;
+  color: #2C3333!important;
+}
+
+.aqua-input-font{
+  color: slategrey;
+}
