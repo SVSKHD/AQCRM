@@ -5,9 +5,9 @@ import AquaCardLayover from "@/reusbales/cardLayover";
 import { Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { FaTrash } from "react-icons/fa"
-import InvoiceOperations from "@/services/invoice";
+import InvoiceOperations from "../services/invoice";
 import AquaInvoicesList from "./Dynamic/InvoiceComponents/invoiceList";
-import AquaPlaceHolderInput from "@/reusbales/AquaPlaceHolderInput";
+import AquaPlaceHolderInput from "../reusbales/AquaPlaceHolderInput";
 
 const InvoiceComponent = () => {
   const [readMode, setReadMode] = useState(false)

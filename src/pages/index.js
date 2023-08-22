@@ -1,4 +1,4 @@
-import HomeComponent from "@/PageComponents/HomeComponent"
+import HomeComponent from "../PageComponents/HomeComponent"
 const HomeIndex = () => {
   return (
     <>
