@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import AQ from "../../Assests/logo.png";
-import AquaInvoiceCardLayover from "../reusbales/invoiceCardLayover";
-import AquaLists from "../reusbales/listedElements";
-import AquaPlaceholder from "../reusbales/placeholder";
-import InvoiceOperations from "../services/invoice";
+import AquaInvoiceCardLayover from "../../reusbales/invoiceCardLayover";
+import AquaLists from "../../reusbales/listedElements";
+import AquaPlaceholder from "../../reusbales/AquaPlaceHolderInput";
+import InvoiceOperations from "../../services/invoice";
 
 const AquaDyanamicInvoicesComponent = () => {
   const Router = useRouter();
