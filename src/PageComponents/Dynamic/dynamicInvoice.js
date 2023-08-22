@@ -11,6 +11,8 @@ const AquaDyanamicInvoicesComponent = () => {
   const Router = useRouter();
   let id = Router.query.id;
   const [invoice, setInvoice] = useState("");
+  const [screen, setScreen] = useState(window.innerWidth)
+
 
   const { getIndividualInvoice } = InvoiceOperations();
   const getInvoiceById = async (id) => {
@@ -22,11 +24,22 @@ const AquaDyanamicInvoicesComponent = () => {
     });
   };
   useEffect(() => {
+    const handleResize = () => {
+      setScreen(window.innerWidth);
+    };
+    if (window !== undefined) {
+      window.addEventListener('resize', handleResize);
+    }
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  useEffect(() => {
     getInvoiceById(id);
   }, []);
 
   const [gst, setGst] = useState(false);
-  const { customerDetails, products, gstDetails , date , invoiceNo} = invoice;
+  const { customerDetails, products, gstDetails, date, invoiceNo } = invoice;
 
   let termsAndConditions = [
     {
@@ -59,9 +72,9 @@ const AquaDyanamicInvoicesComponent = () => {
     },
   ];
 
-  const BasePrice = (price) =>{
+  const BasePrice = (price) => {
     let basePrice = Math.floor(price * 0.8474594);
-    return basePrice 
+    return basePrice
   }
 
   const gstValueGenerate = (price) => {
@@ -72,7 +85,7 @@ const AquaDyanamicInvoicesComponent = () => {
   return (
     <>
       <div className="mb-5" />
-      <div className="container">
+      <div className={screen < 725 ? "container-fluid" : "container"}>
         <AquaInvoiceCardLayover>
           <div className="row">
             <div className="col-md-6 col-lg-6 col-xs-12 col-sm-12">
@@ -84,7 +97,7 @@ const AquaDyanamicInvoicesComponent = () => {
             </div>
             <div className="col-md-6 col-lg-6 col-xs-12 col-sm-12 text-center">
               <div>date : {date}</div>
-              <AquaPlaceholder  type="Invoice-No" size={1.2} name={invoiceNo} />
+              <AquaPlaceholder type="Invoice-No" size={1.2} name={invoiceNo} />
             </div>
           </div>
           <hr />
@@ -162,7 +175,7 @@ const AquaDyanamicInvoicesComponent = () => {
               </tr>
             </thead>
             <tbody>
-              {invoice?products.map((r, i) => (
+              {invoice ? products.map((r, i) => (
                 <>
                   <tr>
                     <th scope="row">{i + 1}</th>
@@ -172,7 +185,7 @@ const AquaDyanamicInvoicesComponent = () => {
                     <td className="text-success">₹{r.productPrice}</td>
                   </tr>
                 </>
-              )):""}
+              )) : ""}
             </tbody>
           </table>
           <hr />
