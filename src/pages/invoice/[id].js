@@ -1,4 +1,4 @@
-import AquaDyanamicInvoicesComponent from "../../PageComponents/dynamic/dynamicInvoice";
+import AquaDyanamicInvoicesComponent from "../../PageComponents/Dynamic/dynamicInvoice";
 
 const AquaDyanamicInvoices = ({ params }) => {
   console.log("params", params);
