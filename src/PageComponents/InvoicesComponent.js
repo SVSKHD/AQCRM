@@ -1,13 +1,12 @@
-import AquaLayout from "@/Layout/Layout";
-
-import AquaInput from "@/reusbales/AquaInput";
-import AquaCardLayover from "@/reusbales/cardLayover";
+import AquaLayout from "../Layout/Layout";
+import AquaInput from "../reusbales/AquaInput";
 import { Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { FaTrash } from "react-icons/fa"
 import InvoiceOperations from "../services/invoice";
 import AquaInvoicesList from "./Dynamic/InvoiceComponents/invoiceList";
 import AquaPlaceHolderInput from "../reusbales/AquaPlaceHolderInput";
+import AquaCardLayover from "../reusbales/cardLayover";
 
 const InvoiceComponent = () => {
   const [readMode, setReadMode] = useState(false)
