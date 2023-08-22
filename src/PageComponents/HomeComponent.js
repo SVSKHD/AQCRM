@@ -1,4 +1,4 @@
-import AquaLayout from "@/Layout/Layout"
+import AquaLayout from "../Layout/Layout"
 
 const HomeComponent = () =>{
 return(
